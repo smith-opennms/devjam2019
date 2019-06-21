@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="devjam"> 
+    <feature name="alec-engine-temporal" description="DevJam! Demo Engine for ALEC" version="1.0.0.SNAPSHOT"> 
+        <bundle start-level="80">mvn:org.opennms.devjam2019/alec-engine-temporal/1.0.0-SNAPSHOT</bundle> 
+    </feature> 
+</features>
+

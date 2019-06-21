@@ -1,0 +1,18 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0">
+
+    <!-- Configuration properties -->
+    <cm:property-placeholder id="timeEngineProperties" persistent-id="org.opennms.devjam.timeengine" update-strategy="reload">
+        <cm:default-properties>
+            <cm:property name="sliceMillis" value="10000"/>
+        </cm:default-properties>
+    </cm:property-placeholder>
+
+    <!-- Create and expose the engine factory -->
+    <service interface="org.opennms.alec.engine.api.EngineFactory" ranking="10">
+        <bean class="org.opennms.devjam.timeengine.DevJamEngineFactory">
+             <property name="sliceMillis" value="${sliceMillis}"/>
+        </bean>
+    </service>
+
+</blueprint>
