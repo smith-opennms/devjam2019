@@ -2,6 +2,6 @@ DEVJAM 2019 TIME ENGINE
 
 ==
 
-Demo Code for and ALEC Time Window Correlation Engine
+Demo Code for an ALEC Time Window Correlation Engine
 
 
